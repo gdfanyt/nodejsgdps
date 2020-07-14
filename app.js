@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
   
 const app = express();
   
-// создаем парсер для данных application/x-www-form-urlencoded
+// Г±Г®Г§Г¤Г ГҐГ¬ ГЇГ Г°Г±ГҐГ° Г¤Г«Гї Г¤Г Г­Г­Г»Гµ application/x-www-form-urlencoded
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 app.post("/database/accounts/loginGJAccount.php", urlencodedParser, function (request, response) {
@@ -16,4 +16,4 @@ app.get("/", function(request, response){
     response.sendFile(__dirname + "/register.html");
 });
   
-  app.listen(3000);
+  app.listen(80);
